@@ -50,14 +50,14 @@ The intermediate previous balance $\hat b_i$ is required to ensure that $\Delta 
 
 ### Derivation of $Z$ Update
 The following is the derivation of the $Z$ update for a transfer. The proof for updating $Z$ after an emissions multiple change is nearly identical excpet that only $i$ is excluded from the sum and split out.
-$$ Z' = \sum_{x=0}^n \sqrt{m_x'\cdot b_x'}$$
-$$ Z' = \sum_{x=0,x\ne i,j}^n \sqrt{m_x\cdot b_x'} + \sqrt{m_i'\cdot b_i'}+ \sqrt{m_j'\cdot b_j'}$$
-$$ Z' = \sum_{x=0,x\ne i,j}^n (\sqrt{m_x\cdot g(m_x,b_x,\Delta t)}) + \sqrt{m_i'\cdot b_i'}+ \sqrt{m_j'\cdot b_j'}$$
-$$ Z' = \sum_{x=0,x\ne i,j}^n (\sqrt{m_x\cdot (b_x + \frac{1}{4}\cdot\Delta t^2\cdot m_x+\Delta t\cdot\sqrt{m_x\cdot b_x})}) + \sqrt{m_i'\cdot b_i'}+ \sqrt{m_j'\cdot b_j'}$$
-$$ Z' = \sum_{x=0,x\ne i,j}^n \sqrt{m_x\cdot(\sqrt{b_x}^2 + 2\cdot \sqrt{b_x}\cdot\frac{1}{2}\cdot\sqrt{m_x}\cdot\Delta t + (\frac{1}{2}\cdot\sqrt{m_x}\cdot\Delta t)^2  )  } + \sqrt{m_i'\cdot b_i'} + \sqrt{m_j'\cdot b_j'}$$
-$$ Z' = \sum_{x=0,x\ne i,j}^n \sqrt{m_x\cdot(\sqrt{b_x} + \frac{1}{2}\cdot\sqrt{m_x}\cdot\Delta t  )^2  } + \sqrt{m_i'\cdot b_i'} + \sqrt{m_j'\cdot b_j'}$$
-$$ Z' = \sum_{x=0,x\ne i,j}^n (\sqrt{m_x}\cdot(\sqrt{b_x} + \frac{1}{2}\cdot\sqrt{m_x}\cdot\Delta t))   + \sqrt{m_i'\cdot b_i'} + \sqrt{m_j'\cdot b_j'}$$
-$$ Z' = \sum_{x=0,x\ne i,j}^n \sqrt{m_x\cdot b_x} +\sum_{x=0,x\ne i,j}^n (\frac{1}{2}\cdot\Delta t\cdot m_x) + \sqrt{m_i'\cdot b_i'} + \sqrt{m_j'\cdot b_j'} $$
-$$ Z' = \sum_{x=0,x\ne i,j}^n \sqrt{m_x\cdot b_x} +\frac{1}{2}\cdot\Delta t\cdot \sum_{x=0,x\ne i,j}^n m_x + \sqrt{m_i'\cdot b_i'} + \sqrt{m_j'\cdot b_j'} $$
-$$ Z' = (Z - \sqrt{m_i\cdot b_i}- \sqrt{m_j\cdot b_j}) + (\frac{1}{2}\cdot\Delta t\cdot(M - m_i - m_j)) + \sqrt{m_i'\cdot b_i'} + \sqrt{m_j'\cdot b_j'} $$
+$$Z' = \sum_{x=0}^n \sqrt{m_x'\cdot b_x'}$$
+$$Z' = \sum_{x=0,x\ne i,j}^n \sqrt{m_x\cdot b_x'} + \sqrt{m_i'\cdot b_i'}+ \sqrt{m_j'\cdot b_j'}$$
+$$Z' = \sum_{x=0,x\ne i,j}^n (\sqrt{m_x\cdot g(m_x,b_x,\Delta t)}) + \sqrt{m_i'\cdot b_i'}+ \sqrt{m_j'\cdot b_j'}$$
+$$Z' = \sum_{x=0,x\ne i,j}^n (\sqrt{m_x\cdot (b_x + \frac{1}{4}\cdot\Delta t^2\cdot m_x+\Delta t\cdot\sqrt{m_x\cdot b_x})}) + \sqrt{m_i'\cdot b_i'}+ \sqrt{m_j'\cdot b_j'}$$
+$$Z' = \sum_{x=0,x\ne i,j}^n \sqrt{m_x\cdot(\sqrt{b_x}^2 + 2\cdot \sqrt{b_x}\cdot\frac{1}{2}\cdot\sqrt{m_x}\cdot\Delta t + (\frac{1}{2}\cdot\sqrt{m_x}\cdot\Delta t)^2  )  } + \sqrt{m_i'\cdot b_i'} + \sqrt{m_j'\cdot b_j'}$$
+$$Z' = \sum_{x=0,x\ne i,j}^n \sqrt{m_x\cdot(\sqrt{b_x} + \frac{1}{2}\cdot\sqrt{m_x}\cdot\Delta t  )^2  } + \sqrt{m_i'\cdot b_i'} + \sqrt{m_j'\cdot b_j'}$$
+$$Z' = \sum_{x=0,x\ne i,j}^n (\sqrt{m_x}\cdot(\sqrt{b_x} + \frac{1}{2}\cdot\sqrt{m_x}\cdot\Delta t))   + \sqrt{m_i'\cdot b_i'} + \sqrt{m_j'\cdot b_j'}$$
+$$Z' = \sum_{x=0,x\ne i,j}^n \sqrt{m_x\cdot b_x} +\sum_{x=0,x\ne i,j}^n (\frac{1}{2}\cdot\Delta t\cdot m_x) + \sqrt{m_i'\cdot b_i'} + \sqrt{m_j'\cdot b_j'}$$
+$$Z' = \sum_{x=0,x\ne i,j}^n \sqrt{m_x\cdot b_x} +\frac{1}{2}\cdot\Delta t\cdot \sum_{x=0,x\ne i,j}^n m_x + \sqrt{m_i'\cdot b_i'} + \sqrt{m_j'\cdot b_j'}$$
+$$Z' = (Z - \sqrt{m_i\cdot b_i}- \sqrt{m_j\cdot b_j}) + (\frac{1}{2}\cdot\Delta t\cdot(M - m_i - m_j)) + \sqrt{m_i'\cdot b_i'} + \sqrt{m_j'\cdot b_j'}$$
 $$Z' = Z  + \frac{1}{2}\Delta t\cdot (M - m_i - m_j)+ (\sqrt{m_i' \cdot b_i'} - \sqrt{m_i \cdot b_i}) + (\sqrt{m_j' \cdot b_j'} - \sqrt{m_j \cdot b_j})$$
