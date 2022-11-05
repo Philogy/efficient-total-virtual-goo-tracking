@@ -68,8 +68,14 @@ $$Z' = (Z - \sqrt{m_i\cdot b_i}- \sqrt{m_j\cdot b_j}) + (\frac{1}{2}\cdot\Delta 
 $$Z' = Z  + \frac{1}{2}\Delta t\cdot (M - m_i - m_j)+ (\sqrt{m_i' \cdot b_i'} - \sqrt{m_i \cdot b_i}) + (\sqrt{m_j' \cdot b_j'} - \sqrt{m_j \cdot b_j})$$
 ## Proof Of $T$ Update Consistency
 Assuming no transfers, emissions or GOO balance changes, the following proves that updating $T$ after $\Delta t_1$ and $\Delta t_2$ is equivalent to updating once after $\Delta t_1  + \Delta t_2$:
+
+**Total supply after single "large" update:**
 $$T' = T_0 + \frac{1}{4}\cdot M\cdot(\Delta t_1 + \Delta t_2)^2 + (\Delta t_1 + \Delta t_2)\cdot Z_0 $$
+
+**Total supply after 1st "small" update:**
 $$T_1 = T_0 + \frac{1}{4}\cdot M\cdot\Delta t_1^2 + \Delta t_1 \cdot Z_0 $$
+
+**Total proof:**
 $$T_2 = T_1 + \frac{1}{4}\cdot M\cdot\Delta t_2^2 + \Delta t_2 \cdot (Z_0 + \frac{1}{2}\cdot M \cdot \Delta t_1) $$
 $$T_2 = T_0 + \frac{1}{4}\cdot M\cdot\Delta t_1^2 + \Delta t_1 \cdot Z_0  + \frac{1}{4}\cdot M\cdot\Delta t_2^2 + \Delta t_2 \cdot (Z_0 + \frac{1}{2}\cdot M \cdot \Delta t_1) $$
 $$T_2 = T_0 + \frac{1}{4}\cdot M\cdot\Delta t_1^2 + \Delta t_1 \cdot Z_0  + \frac{1}{4}\cdot M\cdot\Delta t_2^2 + \Delta t_2 \cdot Z_0 + \Delta t_2 \cdot \frac{1}{2}\cdot M \cdot \Delta t_1 $$
