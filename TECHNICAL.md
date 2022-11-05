@@ -52,6 +52,13 @@ Change in the virtual goo balance $\Delta b$ of account $i$:
 - $Z' = Z + \frac{1}{2}\Delta t\cdot (M - m_i) + \sqrt{m_i}\cdot(\sqrt{b_i'}-\sqrt{\hat b_i })$
 The intermediate previous balance $\hat b_i$ is required to ensure that $\Delta t = \Delta t_{\hat i}$
 
+### No change global update
+If no change occurs (transfer, emissions change) but a global update is
+triggered, besides the total supply accumulator $T$ the goo production factor
+accumulator $Z$ must also be updated:
+
+$$Z' = Z + \frac{1}{2}\Delta t\cdot M
+
 
 ### Derivation of $Z$ Update
 The following is the derivation of the $Z$ update for a transfer. The proof for updating $Z$ after an emissions multiple change is nearly identical excpet that only $i$ is excluded from the sum and split out.
@@ -74,9 +81,10 @@ $$T' = T_0 + \frac{1}{4}\cdot M\cdot(\Delta t_1 + \Delta t_2)^2 + (\Delta t_1 + 
 
 **Total supply after 1st "small" update:**
 $$T_1 = T_0 + \frac{1}{4}\cdot M\cdot\Delta t_1^2 + \Delta t_1 \cdot Z_0 $$
+$$Z_1 = Z_0 + \frac{1}{2}\cdot\Delta t\cdot M$$
 
 **Total supply after 2nd "small" update:**
-$$T_2 = T_1 + \frac{1}{4}\cdot M\cdot\Delta t_2^2 + \Delta t_2 \cdot (Z_0 + \frac{1}{2}\cdot M \cdot \Delta t_1) $$
+$$T_2 = T_1 + \frac{1}{4}\cdot M\cdot\Delta t_2^2 + \Delta t_2 \cdot Z_1 $$
 
 **Proof that $T_2 = T'$:**
 $$T_2 = T_0 + \frac{1}{4}\cdot M\cdot\Delta t_1^2 + \Delta t_1 \cdot Z_0  + \frac{1}{4}\cdot M\cdot\Delta t_2^2 + \Delta t_2 \cdot (Z_0 + \frac{1}{2}\cdot M \cdot \Delta t_1) $$
