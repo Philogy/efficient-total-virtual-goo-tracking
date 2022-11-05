@@ -10,14 +10,16 @@
 ## Individual GOO Production
 $g(m_i, b_i, \Delta t_i) = b_i + \frac{1}{4}\cdot m_i\cdot\Delta t^2 + \Delta t\cdot\sqrt{m_i \cdot b_i}$ 
 ## Total Supply
-Total supply $T$ after $\Delta t$ since last update $T' = \sum_{i=0}^n g(m_i,b_i,\Delta t)$
+Total supply $T$ after $\Delta t$ since last update:
+
+$$T'=\sum_{i=0}^n g(m_i,b_i,\Delta t)$$
 
 Assuming the total supply accumulators are always updated on every transfer or emissions multiple change (reveal, legendary gobbler mint) $\Delta t$ is the time passed since the last update and therefore identical for all accounts:
 
-$$ T' = \sum_{i=0}^n  (b_i + \frac{1}{4}\cdot m_i\cdot\Delta t^2 + \Delta t\cdot\sqrt{m_i \cdot b_i}) $$
-$$ T' = \sum_{i=0}^n  b_i + \sum_{i=0}^n (\frac{1}{4}\cdot m_i\cdot\Delta t^2 )+\sum_{i=0}^n (\Delta t\cdot\sqrt{m_i \cdot b_i}) $$
-$$ T' = \sum_{i=0}^n  b_i + \frac{1}{4}\cdot \Delta t^2\cdot\sum_{i=0}^n m_i +\Delta t\cdot\sum_{i=0}^n \sqrt{m_i \cdot b_i} $$
-$$ T' = T + \frac{1}{4}\cdot \Delta t^2\cdot M +\Delta t\cdot Z$$
+$$T' = \sum_{i=0}^n  (b_i + \frac{1}{4}\cdot m_i\cdot\Delta t^2 + \Delta t\cdot\sqrt{m_i \cdot b_i})$$
+$$T' = \sum_{i=0}^n  b_i + \sum_{i=0}^n (\frac{1}{4}\cdot m_i\cdot\Delta t^2 )+\sum_{i=0}^n (\Delta t\cdot\sqrt{m_i \cdot b_i})$$
+$$T' = \sum_{i=0}^n  b_i + \frac{1}{4}\cdot \Delta t^2\cdot\sum_{i=0}^n m_i +\Delta t\cdot\sum_{i=0}^n \sqrt{m_i \cdot b_i}$$
+$$T' = T + \frac{1}{4}\cdot \Delta t^2\cdot M +\Delta t\cdot Z$$
 
 ## Updating $M$, $Z$
 $b_x' = g(m_x, b_x, \Delta t_x)$
