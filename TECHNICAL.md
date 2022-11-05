@@ -79,7 +79,7 @@ Assuming no transfers, emissions or GOO balance changes, the following proves th
 **Total supply after single "large" update:**
 $$T' = T_0 + \frac{1}{4}\cdot M\cdot(\Delta t_1 + \Delta t_2)^2 + (\Delta t_1 + \Delta t_2)\cdot Z_0 $$
 
-**Total supply after 1st "small" update:**
+**Accumulators after 1st "small" update:**
 $$T_1 = T_0 + \frac{1}{4}\cdot M\cdot\Delta t_1^2 + \Delta t_1 \cdot Z_0 $$
 $$Z_1 = Z_0 + \frac{1}{2}\cdot\Delta t_1\cdot M$$
 
@@ -87,7 +87,7 @@ $$Z_1 = Z_0 + \frac{1}{2}\cdot\Delta t_1\cdot M$$
 $$T_2 = T_1 + \frac{1}{4}\cdot M\cdot\Delta t_2^2 + \Delta t_2 \cdot Z_1 $$
 
 **Proof that $T_2 = T'$:**
-$$T_2 = T_0 + \frac{1}{4}\cdot M\cdot\Delta t_1^2 + \Delta t_1 \cdot Z_0  + \frac{1}{4}\cdot M\cdot\Delta t_2^2 + \Delta t_2 \cdot (Z_0 + \frac{1}{2}\cdot M \cdot \Delta t_1) $$
+$$T_2 = (T_0 + \frac{1}{4}\cdot M\cdot\Delta t_1^2 + \Delta t_1 \cdot Z_0)  + \frac{1}{4}\cdot M\cdot\Delta t_2^2 + \Delta t_2 \cdot (Z_0 + \frac{1}{2}\cdot M \cdot \Delta t_1) $$
 $$T_2 = T_0 + \frac{1}{4}\cdot M\cdot\Delta t_1^2 + \Delta t_1 \cdot Z_0  + \frac{1}{4}\cdot M\cdot\Delta t_2^2 + \Delta t_2 \cdot Z_0 + \Delta t_2 \cdot \frac{1}{2}\cdot M \cdot \Delta t_1 $$
 $$T_2 = T_0 + \frac{1}{4}\cdot M\cdot\Delta t_1^2 +  \Delta t_2 \cdot \frac{1}{2}\cdot M \cdot \Delta t_1 + \frac{1}{4}\cdot M\cdot\Delta t_2^2 + \Delta t_1 \cdot Z_0 + \Delta t_2 \cdot Z_0 $$
 $$T_2 = T_0 + \frac{1}{4}\cdot M\cdot\Delta t_1^2 +  \Delta t_2 \cdot \frac{1}{2}\cdot M \cdot \Delta t_1 + \frac{1}{4}\cdot M\cdot\Delta t_2^2 + (\Delta t_1 + \Delta t_2) \cdot Z_0 $$
