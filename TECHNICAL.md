@@ -52,12 +52,12 @@ Change in the virtual goo balance $\Delta b$ of account $i$:
 - $Z' = Z + \frac{1}{2}\Delta t\cdot (M - m_i) + \sqrt{m_i}\cdot(\sqrt{b_i'}-\sqrt{\hat b_i })$
 The intermediate previous balance $\hat b_i$ is required to ensure that $\Delta t = \Delta t_{\hat i}$
 
-### No change global update
+### No Change Global Update
 If no change occurs (transfer, emissions change) but a global update is
 triggered, besides the total supply accumulator $T$ the goo production factor
 accumulator $Z$ must also be updated:
 
-$$Z' = Z + \frac{1}{2}\Delta t\cdot M
+$$Z' = Z + \frac{1}{2}\Delta t\cdot M$$
 
 
 ### Derivation of $Z$ Update
