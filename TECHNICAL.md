@@ -14,7 +14,7 @@ Total supply $T$ after $\Delta t$ since last update:
 
 $$T'=\sum_{i=0}^n g(m_i,b_i,\Delta t)$$
 
-Assuming the total supply accumulators are always updated on every transfer or emissions multiple change (reveal, legendary gobbler mint) $\Delta t$ is the time passed since the last update and therefore identical for all accounts:
+Assuming the total supply accumulators are always updated on every transfer or emissions multiple change (reveal, legendary gobbler mint) $\Delta t$ is the time passed since the last global update and is therefore identical for all accounts:
 
 $$T' = \sum_{i=0}^n  (b_i + \frac{1}{4}\cdot m_i\cdot\Delta t^2 + \Delta t\cdot\sqrt{m_i \cdot b_i})$$
 
